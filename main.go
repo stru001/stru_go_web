@@ -36,7 +36,7 @@ func main()  {
 	if err := mysql.Init(settings.Conf.MySQLConfig); err != nil {
 		return
 	}
-	mysql.Close()
+	defer mysql.Close()
 	//4. 初始化Redis
 	if err := redis.Init(settings.Conf.RedisConfig); err != nil {
 		return
