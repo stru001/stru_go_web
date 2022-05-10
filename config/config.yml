@@ -1,0 +1,26 @@
+name: "stru_web"
+mode: "dev"
+port: 8080
+version: "v0.0.1"
+
+log:
+  level: "debug"
+  filename: "stru_web.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: "192.168.10.10"
+  port: 3306
+  dbname: "go_blog"
+  user: "root"
+  password: "stru123!"
+  max_open_conns: 100
+  max_idle_conns: 10
+  max_lift_time: 3
+
+redis:
+  host: "192.168.10.10"
+  port: 6379
+  pssword: ""
