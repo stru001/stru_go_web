@@ -31,7 +31,7 @@ func main()  {
 	if err := logger.Init(settings.Conf.LogConfig); err != nil {
 		return
 	}
-	zap.L().Sync()
+	defer zap.L().Sync()
 	//3. 初始化Mysql
 	if err := mysql.Init(settings.Conf.MySQLConfig); err != nil {
 		return
